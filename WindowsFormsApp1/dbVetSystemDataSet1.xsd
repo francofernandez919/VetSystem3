@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbVetSystemDataSet1" targetNamespace="http://tempuri.org/dbVetSystemDataSet1.xsd" xmlns:mstns="http://tempuri.org/dbVetSystemDataSet1.xsd" xmlns="http://tempuri.org/dbVetSystemDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbVetSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbVetSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.dbVetSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_mascotasTableAdapter" GeneratorDataComponentClassName="view_mascotasTableAdapter" Name="view_mascotas" UserDataComponentName="view_mascotasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbVetSystemConnectionString (Settings)" DbObjectName="dbVetSystem.dbo.view_mascotas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_mascota, nombre_mascota, nombre_tipo_mascota, nombre_raza, FK_mascota_cliente, nombre_cliente, apellido_cliente, peso_mascota, sexo_mascota, fechanac_mascota, foto_mascota FROM dbo.view_mascotas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_mascota" DataSetColumn="id_mascota" />
+              <Mapping SourceColumn="nombre_mascota" DataSetColumn="nombre_mascota" />
+              <Mapping SourceColumn="nombre_tipo_mascota" DataSetColumn="nombre_tipo_mascota" />
+              <Mapping SourceColumn="nombre_raza" DataSetColumn="nombre_raza" />
+              <Mapping SourceColumn="FK_mascota_cliente" DataSetColumn="FK_mascota_cliente" />
+              <Mapping SourceColumn="nombre_cliente" DataSetColumn="nombre_cliente" />
+              <Mapping SourceColumn="apellido_cliente" DataSetColumn="apellido_cliente" />
+              <Mapping SourceColumn="peso_mascota" DataSetColumn="peso_mascota" />
+              <Mapping SourceColumn="sexo_mascota" DataSetColumn="sexo_mascota" />
+              <Mapping SourceColumn="fechanac_mascota" DataSetColumn="fechanac_mascota" />
+              <Mapping SourceColumn="foto_mascota" DataSetColumn="foto_mascota" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbVetSystemDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbVetSystemDataSet1" msprop:Generator_UserDSName="dbVetSystemDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_mascotas" msprop:Generator_TableClassName="view_mascotasDataTable" msprop:Generator_TableVarName="tableview_mascotas" msprop:Generator_TablePropName="view_mascotas" msprop:Generator_RowDeletingName="view_mascotasRowDeleting" msprop:Generator_RowChangingName="view_mascotasRowChanging" msprop:Generator_RowEvHandlerName="view_mascotasRowChangeEventHandler" msprop:Generator_RowDeletedName="view_mascotasRowDeleted" msprop:Generator_UserTableName="view_mascotas" msprop:Generator_RowChangedName="view_mascotasRowChanged" msprop:Generator_RowEvArgName="view_mascotasRowChangeEvent" msprop:Generator_RowClassName="view_mascotasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_mascota" msprop:Generator_ColumnVarNameInTable="columnid_mascota" msprop:Generator_ColumnPropNameInRow="id_mascota" msprop:Generator_ColumnPropNameInTable="id_mascotaColumn" msprop:Generator_UserColumnName="id_mascota" type="xs:int" />
+              <xs:element name="nombre_mascota" msprop:Generator_ColumnVarNameInTable="columnnombre_mascota" msprop:Generator_ColumnPropNameInRow="nombre_mascota" msprop:Generator_ColumnPropNameInTable="nombre_mascotaColumn" msprop:Generator_UserColumnName="nombre_mascota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_tipo_mascota" msprop:Generator_ColumnVarNameInTable="columnnombre_tipo_mascota" msprop:Generator_ColumnPropNameInRow="nombre_tipo_mascota" msprop:Generator_ColumnPropNameInTable="nombre_tipo_mascotaColumn" msprop:Generator_UserColumnName="nombre_tipo_mascota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_raza" msprop:Generator_ColumnVarNameInTable="columnnombre_raza" msprop:Generator_ColumnPropNameInRow="nombre_raza" msprop:Generator_ColumnPropNameInTable="nombre_razaColumn" msprop:Generator_UserColumnName="nombre_raza" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FK_mascota_cliente" msprop:Generator_ColumnVarNameInTable="columnFK_mascota_cliente" msprop:Generator_ColumnPropNameInRow="FK_mascota_cliente" msprop:Generator_ColumnPropNameInTable="FK_mascota_clienteColumn" msprop:Generator_UserColumnName="FK_mascota_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido_cliente" msprop:Generator_ColumnVarNameInTable="columnapellido_cliente" msprop:Generator_ColumnPropNameInRow="apellido_cliente" msprop:Generator_ColumnPropNameInTable="apellido_clienteColumn" msprop:Generator_UserColumnName="apellido_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="peso_mascota" msprop:Generator_ColumnVarNameInTable="columnpeso_mascota" msprop:Generator_ColumnPropNameInRow="peso_mascota" msprop:Generator_ColumnPropNameInTable="peso_mascotaColumn" msprop:Generator_UserColumnName="peso_mascota" type="xs:double" minOccurs="0" />
+              <xs:element name="sexo_mascota" msprop:Generator_ColumnVarNameInTable="columnsexo_mascota" msprop:Generator_ColumnPropNameInRow="sexo_mascota" msprop:Generator_ColumnPropNameInTable="sexo_mascotaColumn" msprop:Generator_UserColumnName="sexo_mascota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechanac_mascota" msprop:Generator_ColumnVarNameInTable="columnfechanac_mascota" msprop:Generator_ColumnPropNameInRow="fechanac_mascota" msprop:Generator_ColumnPropNameInTable="fechanac_mascotaColumn" msprop:Generator_UserColumnName="fechanac_mascota" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="foto_mascota" msprop:Generator_ColumnVarNameInTable="columnfoto_mascota" msprop:Generator_ColumnPropNameInRow="foto_mascota" msprop:Generator_ColumnPropNameInTable="foto_mascotaColumn" msprop:Generator_UserColumnName="foto_mascota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_mascotas" />
+      <xs:field xpath="mstns:id_mascota" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbVSDataSetViewVeterinarios" targetNamespace="http://tempuri.org/dbVSDataSetViewVeterinarios.xsd" xmlns:mstns="http://tempuri.org/dbVSDataSetViewVeterinarios.xsd" xmlns="http://tempuri.org/dbVSDataSetViewVeterinarios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbVetSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbVetSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.dbVetSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_veterinariosTableAdapter" GeneratorDataComponentClassName="view_veterinariosTableAdapter" Name="view_veterinarios" UserDataComponentName="view_veterinariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbVetSystemConnectionString (Settings)" DbObjectName="dbVetSystem.dbo.view_veterinarios" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_veterinario, matricula_veterinario, nombre_veterinario, apellido_veterinario, nombre_especialidad FROM dbo.view_veterinarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_veterinario" DataSetColumn="id_veterinario" />
+              <Mapping SourceColumn="matricula_veterinario" DataSetColumn="matricula_veterinario" />
+              <Mapping SourceColumn="nombre_veterinario" DataSetColumn="nombre_veterinario" />
+              <Mapping SourceColumn="apellido_veterinario" DataSetColumn="apellido_veterinario" />
+              <Mapping SourceColumn="nombre_especialidad" DataSetColumn="nombre_especialidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbVSDataSetViewVeterinarios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbVSDataSetViewVeterinarios" msprop:Generator_UserDSName="dbVSDataSetViewVeterinarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_veterinarios" msprop:Generator_TableClassName="view_veterinariosDataTable" msprop:Generator_TableVarName="tableview_veterinarios" msprop:Generator_TablePropName="view_veterinarios" msprop:Generator_RowDeletingName="view_veterinariosRowDeleting" msprop:Generator_RowChangingName="view_veterinariosRowChanging" msprop:Generator_RowEvHandlerName="view_veterinariosRowChangeEventHandler" msprop:Generator_RowDeletedName="view_veterinariosRowDeleted" msprop:Generator_UserTableName="view_veterinarios" msprop:Generator_RowChangedName="view_veterinariosRowChanged" msprop:Generator_RowEvArgName="view_veterinariosRowChangeEvent" msprop:Generator_RowClassName="view_veterinariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_veterinario" msprop:Generator_ColumnVarNameInTable="columnid_veterinario" msprop:Generator_ColumnPropNameInRow="id_veterinario" msprop:Generator_ColumnPropNameInTable="id_veterinarioColumn" msprop:Generator_UserColumnName="id_veterinario" type="xs:int" />
+              <xs:element name="matricula_veterinario" msprop:Generator_ColumnVarNameInTable="columnmatricula_veterinario" msprop:Generator_ColumnPropNameInRow="matricula_veterinario" msprop:Generator_ColumnPropNameInTable="matricula_veterinarioColumn" msprop:Generator_UserColumnName="matricula_veterinario" type="xs:int" />
+              <xs:element name="nombre_veterinario" msprop:Generator_ColumnVarNameInTable="columnnombre_veterinario" msprop:Generator_ColumnPropNameInRow="nombre_veterinario" msprop:Generator_ColumnPropNameInTable="nombre_veterinarioColumn" msprop:Generator_UserColumnName="nombre_veterinario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido_veterinario" msprop:Generator_ColumnVarNameInTable="columnapellido_veterinario" msprop:Generator_ColumnPropNameInRow="apellido_veterinario" msprop:Generator_ColumnPropNameInTable="apellido_veterinarioColumn" msprop:Generator_UserColumnName="apellido_veterinario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_especialidad" msprop:Generator_ColumnVarNameInTable="columnnombre_especialidad" msprop:Generator_ColumnPropNameInRow="nombre_especialidad" msprop:Generator_ColumnPropNameInTable="nombre_especialidadColumn" msprop:Generator_UserColumnName="nombre_especialidad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_veterinarios" />
+      <xs:field xpath="mstns:matricula_veterinario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

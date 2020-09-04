@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D1F4E41-0618-4D4C-8BC1-BEA459CB6DF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbVetSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVetSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVetSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVetSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableEspecialidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableEspecialidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTablePracticas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTablePracticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTablePresentacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTablePresentacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableRaza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableRaza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableRubro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableRubro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableTipoMascota.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableTipoMascota.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableTipoTurno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableTipoTurno.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableTipoVacuna.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableTipoVacuna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetTableVeterinario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetTableVeterinario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetViewMascotas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetViewMascotas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetViewTurnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetViewTurnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbVSDataSetViewVeterinarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVSDataSetViewVeterinarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Especialidad_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Especialidad_Actualizar.Designer.cs">
+      <DependentUpon>Form_Especialidad_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Especialidad_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Especialidad_Eliminar.Designer.cs">
+      <DependentUpon>Form_Especialidad_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica1.Designer.cs">
+      <DependentUpon>Form_Historia_Clinica1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica2.Designer.cs">
+      <DependentUpon>Form_Historia_Clinica2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica3.Designer.cs">
+      <DependentUpon>Form_Historia_Clinica3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Historia_Clinica4.Designer.cs">
+      <DependentUpon>Form_Historia_Clinica4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Practicas_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Practicas_Actualizar.Designer.cs">
+      <DependentUpon>Form_Practicas_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Practicas_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Practicas_Eliminar.Designer.cs">
+      <DependentUpon>Form_Practicas_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Presentacion_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Presentacion_Actualizar.Designer.cs">
+      <DependentUpon>Form_Presentacion_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Presentacion_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Presentacion_Eliminar.Designer.cs">
+      <DependentUpon>Form_Presentacion_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Razas_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Razas_Actualizar.Designer.cs">
+      <DependentUpon>Form_Razas_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Carnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Carnet.Designer.cs">
+      <DependentUpon>Form_Carnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Carnet_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Carnet_Consultar.Designer.cs">
+      <DependentUpon>Form_Carnet_Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Desparasitacion_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Desparasitacion_Registrar.Designer.cs">
+      <DependentUpon>Form_Desparasitacion_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mascotas_ConsultarModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mascotas_ConsultarModificar.Designer.cs">
+      <DependentUpon>Form_Mascotas_ConsultarModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mascotas_Registrar1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mascotas_Registrar1.Designer.cs">
+      <DependentUpon>Form_Mascotas_Registrar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Razas_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Razas_Eliminar.Designer.cs">
+      <DependentUpon>Form_Razas_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rubros_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rubros_Actualizar.Designer.cs">
+      <DependentUpon>Form_Rubros_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rubros_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rubros_Eliminar.Designer.cs">
+      <DependentUpon>Form_Rubros_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tipos_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tipos_Actualizar.Designer.cs">
+      <DependentUpon>Form_Tipos_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tipos_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tipos_Eliminar.Designer.cs">
+      <DependentUpon>Form_Tipos_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Turnos_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Turnos_Eliminar.Designer.cs">
+      <DependentUpon>Form_Turnos_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Turnos_Registrar1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Turnos_Registrar1.Designer.cs">
+      <DependentUpon>Form_Turnos_Registrar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Turnos_Registrar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Turnos_Registrar2.Designer.cs">
+      <DependentUpon>Form_Turnos_Registrar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Usuarios_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Usuarios_Actualizar.Designer.cs">
+      <DependentUpon>Form_Usuarios_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Usuarios_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Usuarios_Eliminar.Designer.cs">
+      <DependentUpon>Form_Usuarios_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Vacunacion_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Vacunacion_Registrar.Designer.cs">
+      <DependentUpon>Form_Vacunacion_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Turnos_Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Turnos_Listado.Designer.cs">
+      <DependentUpon>Form_Turnos_Listado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Vacunas_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Vacunas_Actualizar.Designer.cs">
+      <DependentUpon>Form_Vacunas_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Vacunas_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Vacunas_Eliminar.Designer.cs">
+      <DependentUpon>Form_Vacunas_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Veterinarios_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Veterinarios_Consultar.Designer.cs">
+      <DependentUpon>Form_Veterinarios_Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Clientes_ConsultarModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Clientes_ConsultarModificar.Designer.cs">
+      <DependentUpon>Form_Clientes_ConsultarModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Veterinarios_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Veterinarios_Registrar.Designer.cs">
+      <DependentUpon>Form_Veterinarios_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Veterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Veterinario.Designer.cs">
+      <DependentUpon>Menu_Veterinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Secretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Secretaria.Designer.cs">
+      <DependentUpon>Menu_Secretaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Turnos_ConsultarModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Turnos_ConsultarModificar.Designer.cs">
+      <DependentUpon>Form_Turnos_ConsultarModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Veterinarios_ConsultarModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Veterinarios_ConsultarModificar.Designer.cs">
+      <DependentUpon>Form_Veterinarios_ConsultarModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Administrador.Designer.cs">
+      <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Clientes_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Clientes_Registrar.Designer.cs">
+      <DependentUpon>Form_Clientes_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mascotas_Registrar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mascotas_Registrar2.Designer.cs">
+      <DependentUpon>Form_Mascotas_Registrar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Especialidad_Actualizar.resx">
+      <DependentUpon>Form_Especialidad_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Especialidad_Eliminar.resx">
+      <DependentUpon>Form_Especialidad_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Historia_Clinica1.resx">
+      <DependentUpon>Form_Historia_Clinica1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Historia_Clinica2.resx">
+      <DependentUpon>Form_Historia_Clinica2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Historia_Clinica3.resx">
+      <DependentUpon>Form_Historia_Clinica3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Historia_Clinica4.resx">
+      <DependentUpon>Form_Historia_Clinica4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Practicas_Actualizar.resx">
+      <DependentUpon>Form_Practicas_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Practicas_Eliminar.resx">
+      <DependentUpon>Form_Practicas_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Presentacion_Actualizar.resx">
+      <DependentUpon>Form_Presentacion_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Presentacion_Eliminar.resx">
+      <DependentUpon>Form_Presentacion_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Razas_Actualizar.resx">
+      <DependentUpon>Form_Razas_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Carnet.resx">
+      <DependentUpon>Form_Carnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Carnet_Consultar.resx">
+      <DependentUpon>Form_Carnet_Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Desparasitacion_Registrar.resx">
+      <DependentUpon>Form_Desparasitacion_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mascotas_ConsultarModificar.resx">
+      <DependentUpon>Form_Mascotas_ConsultarModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mascotas_Registrar1.resx">
+      <DependentUpon>Form_Mascotas_Registrar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Razas_Eliminar.resx">
+      <DependentUpon>Form_Razas_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rubros_Actualizar.resx">
+      <DependentUpon>Form_Rubros_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rubros_Eliminar.resx">
+      <DependentUpon>Form_Rubros_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tipos_Actualizar.resx">
+      <DependentUpon>Form_Tipos_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tipos_Eliminar.resx">
+      <DependentUpon>Form_Tipos_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Turnos_Eliminar.resx">
+      <DependentUpon>Form_Turnos_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Turnos_Registrar1.resx">
+      <DependentUpon>Form_Turnos_Registrar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Turnos_Registrar2.resx">
+      <DependentUpon>Form_Turnos_Registrar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Usuarios_Actualizar.resx">
+      <DependentUpon>Form_Usuarios_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Usuarios_Eliminar.resx">
+      <DependentUpon>Form_Usuarios_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Vacunacion_Registrar.resx">
+      <DependentUpon>Form_Vacunacion_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Turnos_Listado.resx">
+      <DependentUpon>Form_Turnos_Listado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Vacunas_Actualizar.resx">
+      <DependentUpon>Form_Vacunas_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Vacunas_Eliminar.resx">
+      <DependentUpon>Form_Vacunas_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Veterinarios_Consultar.resx">
+      <DependentUpon>Form_Veterinarios_Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Clientes_ConsultarModificar.resx">
+      <DependentUpon>Form_Clientes_ConsultarModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Veterinarios_Registrar.resx">
+      <DependentUpon>Form_Veterinarios_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Veterinario.resx">
+      <DependentUpon>Menu_Veterinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Secretaria.resx">
+      <DependentUpon>Menu_Secretaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Turnos_ConsultarModificar.resx">
+      <DependentUpon>Form_Turnos_ConsultarModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Veterinarios_ConsultarModificar.resx">
+      <DependentUpon>Form_Veterinarios_ConsultarModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Administrador.resx">
+      <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Clientes_Registrar.resx">
+      <DependentUpon>Form_Clientes_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mascotas_Registrar2.resx">
+      <DependentUpon>Form_Mascotas_Registrar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dbVetSystemDataSet.xsc">
+      <DependentUpon>dbVetSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbVetSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVetSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVetSystemDataSet.xss">
+      <DependentUpon>dbVetSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbVetSystemDataSet1.xsc">
+      <DependentUpon>dbVetSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbVetSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVetSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVetSystemDataSet1.xss">
+      <DependentUpon>dbVetSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableCliente.xsc">
+      <DependentUpon>dbVSDataSetTableCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableCliente.xss">
+      <DependentUpon>dbVSDataSetTableCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableEspecialidad.xsc">
+      <DependentUpon>dbVSDataSetTableEspecialidad.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableEspecialidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableEspecialidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableEspecialidad.xss">
+      <DependentUpon>dbVSDataSetTableEspecialidad.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTablePracticas.xsc">
+      <DependentUpon>dbVSDataSetTablePracticas.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTablePracticas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTablePracticas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTablePracticas.xss">
+      <DependentUpon>dbVSDataSetTablePracticas.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTablePresentacion.xsc">
+      <DependentUpon>dbVSDataSetTablePresentacion.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTablePresentacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTablePresentacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTablePresentacion.xss">
+      <DependentUpon>dbVSDataSetTablePresentacion.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableRaza.xsc">
+      <DependentUpon>dbVSDataSetTableRaza.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableRaza.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableRaza.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableRaza.xss">
+      <DependentUpon>dbVSDataSetTableRaza.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableRubro.xsc">
+      <DependentUpon>dbVSDataSetTableRubro.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableRubro.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableRubro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableRubro.xss">
+      <DependentUpon>dbVSDataSetTableRubro.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoMascota.xsc">
+      <DependentUpon>dbVSDataSetTableTipoMascota.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoMascota.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableTipoMascota.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableTipoMascota.xss">
+      <DependentUpon>dbVSDataSetTableTipoMascota.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoTurno.xsc">
+      <DependentUpon>dbVSDataSetTableTipoTurno.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoTurno.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableTipoTurno.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableTipoTurno.xss">
+      <DependentUpon>dbVSDataSetTableTipoTurno.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoVacuna.xsc">
+      <DependentUpon>dbVSDataSetTableTipoVacuna.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableTipoVacuna.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableTipoVacuna.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableTipoVacuna.xss">
+      <DependentUpon>dbVSDataSetTableTipoVacuna.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableVeterinario.xsc">
+      <DependentUpon>dbVSDataSetTableVeterinario.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetTableVeterinario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetTableVeterinario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetTableVeterinario.xss">
+      <DependentUpon>dbVSDataSetTableVeterinario.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewMascotas.xsc">
+      <DependentUpon>dbVSDataSetViewMascotas.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewMascotas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetViewMascotas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetViewMascotas.xss">
+      <DependentUpon>dbVSDataSetViewMascotas.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewTurnos.xsc">
+      <DependentUpon>dbVSDataSetViewTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewTurnos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetViewTurnos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetViewTurnos.xss">
+      <DependentUpon>dbVSDataSetViewTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewVeterinarios.xsc">
+      <DependentUpon>dbVSDataSetViewVeterinarios.xsd</DependentUpon>
+    </None>
+    <None Include="dbVSDataSetViewVeterinarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbVSDataSetViewVeterinarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbVSDataSetViewVeterinarios.xss">
+      <DependentUpon>dbVSDataSetViewVeterinarios.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_small.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
